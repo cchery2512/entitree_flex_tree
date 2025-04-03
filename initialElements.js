@@ -5,8 +5,8 @@ export const initialTree = {
   3: { id: '3', name: 'NODOS 3', children: ['4', '5'] },
   4: { id: '4', name: 'NODO 4', children: ['6'] },
   5: { id: '5', name: 'NODO 5', children: ['6'] },
-  6: { id: '6', name: 'NODO 6', children: ['8'] },
+  6: { id: '6', name: 'NODO 6', children: ['8'], selected: true },
   8: { id: '8', name: 'NODO 8' },
-  9: { id: '9', name: 'NODO 9' },
+  9: { id: '9', name: 'NODO 9'},
   10: { id: '10', name: 'NODO 10' },
 };

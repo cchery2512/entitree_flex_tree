@@ -104,7 +104,14 @@ export const layoutElements = (tree, rootId, direction = 'TB') => {
       newNode.targetPosition = isTreeHorizontal ? Left : Top;
     }
 
-    newNode.data = { label: node.name, direction, isRoot, ...node };
+    //newNode.data = { label: node.name, direction, isRoot, ...node };
+    newNode.data = {
+      label: node.name,
+      direction,
+      isRoot,
+      color: node.selected === true ? '#00d169' : 'white',
+      ...node,
+    };
     newNode.id = node.id;
     newNode.type = 'custom';
 
@@ -115,7 +122,8 @@ export const layoutElements = (tree, rootId, direction = 'TB') => {
       x: node.x,
       y: node.y,
     };
-
+    // ✅ Aplica el color al contenedor principal del nodo
+    newNode.style = { backgroundColor: newNode.data.color };
     nodes.push(newNode);
   });
 
